@@ -6,7 +6,7 @@
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:10:50 by gueberso          #+#    #+#             */
-/*   Updated: 2024/10/30 11:22:03 by gueberso         ###   ########.fr       */
+/*   Updated: 2024/10/30 17:23:08 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	ft_read_n_write(int fd)
 	bytes = read(fd, buffer, BUFFER_SIZE);
 	while (bytes > 0)
 	{
+		write(1, &buffer, bytes);
 		bytes = read(fd, buffer, BUFFER_SIZE);
-		write(1, &buffer, BUFFER_SIZE);
 	}
 }
 
