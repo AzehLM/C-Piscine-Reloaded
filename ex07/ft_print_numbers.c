@@ -1,41 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gueberso <gueberso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 23:01:26 by gueberso          #+#    #+#             */
-/*   Updated: 2024/10/30 11:24:05 by gueberso         ###   ########.fr       */
+/*   Created: 2024/10/28 14:57:54 by gueberso          #+#    #+#             */
+/*   Updated: 2024/10/28 15:36:29 by gueberso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+void	ft_putchar(char c);
 
-int	ft_strlen(char *src)
+void	ft_print_numbers(void)
 {
 	int	i;
+	int	a;
 
 	i = 0;
-	while (src && src[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
-{
-	char	*dup;
-	int		i;
-
-	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (!dup)
-		return (NULL);
-	i = 0;
-	while (src[i])
+	a = 0;
+	while (i < 10)
 	{
-		dup[i] = src[i];
+		ft_putchar(a + 48);
 		i++;
+		a++;
 	}
-	dup[i] = '\0';
-	return (dup);
 }
